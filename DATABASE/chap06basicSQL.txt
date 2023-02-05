@@ -1,0 +1,64 @@
+BASIC SQL COMMANDS:
+
+create table table_name(
+
+	fname varchar(20) Not NULL,
+
+	ssn varchar(10)not null
+	dNo varchar(10) 
+	unique(fname),
+	primary key (ssn),
+	foreign key (dno) references department(Dnumber)
+	on delete set default  = "heheh", on update cascade
+);
+dataypes:
+numeric data types: INTEGER, INT , SMALL INT
+floating point real numbers: FLOAT , REAL, DOUBLE-PRECISION
+Formattted numbers use DECIMAL(i,j)  = i number of digits on the left side and j is the number of digits in the left side of the decimal.
+character-string : CHAR(n) n is the number of characters
+varchar(n) n is the maximum number of characters.
+char(10) if we input "smith" then it padded this attribute with 5 spaces to complete the whole space.
+
+CHARACTER LARGE OBJECT CLOB is used to specify the large texts in kbs , mbs gbs.
+
+BOOLEAN TYPE:
+true , false, unknown
+
+date type has 10 ten positions and has three components year, month, day
+yyyy-dd-mm
+
+■ A timestamp data type (TIMESTAMP) includes the DATE and TIME fields, plus
+a minimum of six positions for decimal fractions of seconds and an optional
+WITH TIME ZONE qualifier. 
+TIMESTAMP ‘2014-09-27 09:12:47.648302
+
+you can create the dataype or domain of the attribute separately
+CREATE DOMAIN SSN_TYPE AS CHAR(9).
+
+another  type of constraint can restrict attribute or domain values using check values:
+dNumber int not null check(dNumber > 30 and dNumber < 50);
+
+create domain dNum as integer
+check (dNum > 40 and dNum < 60);
+
+LIKE operator 
+like '%a%' exactly search a
+like 'a%' exactly search a which comes at end.
+like '%a' exactly search a which comes at start.
+
+insert in a table:
+insert into Employees(name, age, ssn) values ('aman',20, 221);
+get query result and add in the table with a new rows.
+
+insert into employees(name , proj_name)
+select name , proj_name from employees where /// this condition;
+
+delete from employees
+where e.no = 12;
+
+update employees
+set salary = salary*1.1;
+from employees;
+
+
+

@@ -1,0 +1,58 @@
+creating a pk for a table using triggers
+creating replica for the persons table 
+
+two types of triggers dml and ddl
+
+before dml trigger:
+1. statement level triggers:
+it is executed only once it is by default
+
+code:
+create or replace trigger emptrg before update on emp
+
+begin
+
+dbms_output.put_line('Record updated');
+
+end;
+/
+
+2. row level trigger:
+it is executed once for each row
+
+code:
+
+create or replace trigger trig2 before update on emp
+for each row
+begin 
+dbms_output.put_line("Record updated");
+end;
+/
+
+
+ddl trigger is created on database level
+
+ create or replace trigger trig1
+before drop on hr.schema
+begin 
+dbms_output.put_line("table dropped");
+end;
+/
+
+bind variables :
+:old   before executing dml statement, all data stored in 
+in :old bind variable   
+:new   after executing dml statement, all data stored in :new
+bind variable.
+
+realtime usage:
+create sequence ac_seq;
+
+create or replace trigger trigger_accs
+before update on accounts for each row
+begin
+insert into transactions (tid, acno, tdate, amount, balanace)
+values (ac_seq.nextval, :new.acno, sysdate, 
+abs(:new.balance - :old.balance), :new.balance)
+end;
+/

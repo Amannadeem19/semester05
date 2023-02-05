@@ -1,0 +1,105 @@
+DATABASE:
+
+-> is a collection of related data.
+-> By data,we mean known facts that can be recorded and have implicit meaning.
+
+Implicit properties:
+
+1. it represents some aspects of real world, sometimes called the mini world. change to the miniworld reflected to the database.
+2.it is logically coherent collection of some data with some inherent meaning.
+3. it is designed, built and populated with data for specific purpose.
+
+
+DBMS: data base management system
+
+is a computerized system that enables users to create
+maintain a databases. It is a general purpose application software that is used to 
+to define, constructing, manipulating and sharing databases among users and other applications.
+
+
+defining a database / descriptive info. : define datatypes, structures, constraints of the data to be stored
+also known as meta data
+
+constructing a database: is the process of storing a data on some storage medium.
+
+manipulating a database : retrive data, update data, generates a report
+
+query: retrived data
+transaction: retrived data as well as write something on database.
+
+OTHER IMP. FUNCTIONS:
+Protection: includes system protection from unauthorized access and hardware security and software crashes
+maintainance: there should be a gap inorder to maintain the DB wth the time.
+
+CHARACTERISTICS OF DATABASE APPROACH:
+
+1. Self-describing nature of a database system:
+self describing data = data item names and values together in one structure.
+
+1. the definintion is stored in the dbms catalog, which contains information such as structure of file, data type and constraints on the data.The info. stored in the catalog is called meta-data.
+2. but in nosql no need of meta data
+3. This catalog is used by dbms and database users who need info about database structure.
+4. dbms can access diverse databases by extracting the database definitions from the catalog and using these definitions
+
+2.Insulation between Programs, and Data, and Data Abstraction:
+
+In traditional file processing, a program is embedded in an application programs, so any changes to the structure of a file may require changing all programs that access that file.
+in contrast, dbms access programs and chanage in the structure of a program cannot affect the data.
+this property is called program data independence.
+
+point2:
+an operation is specified in two parts:
+In interface, operation includes its name and data types and its paramters
+in implementation (or method) : the method is specified separately and can be chnaged without affecting the interface.
+same in the case of user uses program can operate on the data by inoking methods but they cannot access the implementation. thus cannot change the method/program. Thus, this
+property is called program-operation independence
+
+the characteristic that allows program-operation independence and proogram-daata independence are called as data abstraction.
+
+3.Support multiple views of the data:
+
+a database has typically multiple type of users and everyone has their own way of view.
+a view may be the subset of database or it may contain virtual data that is derived from 
+the database files but is not explicitly stored.
+
+4. sharing of data and mulituser transaction processing
+
+dbms must include concurrency control software to ensure the several users toupdate the same data should to in a correct way.
+
+transaction property achieved correctly only through:
+isolation property:
+ensures that each transaction appears to execute in isolation from other transactions.
+atomicity property:
+either ensures all the database operations in a transaction are executed or none are.
+
+
+ADVANTAGES OF USING THE DBMS APPROACH:
+
+1.controlling redundancy
+first, single logical update
+second, storage waste , can become a big problem for large dbs
+third, inconsistent.
+indatabase approach, the views of different user groups are integrated
+during database design eg:
+each data item like birthdate is only one place in a database. This is called data normalization
+
+
+2.Restricting unautthorised access
+
+3.Providing persistent storage
+
+4.Providing storage structures and search techniques for efficient  query processing
+
+5. providing backup and recovery
+recovery is the process to handle the failure.
+backup pehle se bana kar rakhte haib failure hone se pehle
+failure hone ke bad uski recovery hoti ha
+
+6. Provide multiple interfaces
+
+7. Representing complex relationships among data
+
+8. Enforcing integrity constraints
+
+9. 
+ 

@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="949EDCE0-36F2-C112-697E-F2784AEB11D5" name="orders">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:31:41 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="order_name" id="B1FF6FC0-FB03-F7E2-32B2-1D067F30B15A">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:36:52 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Quantity" id="40F80B1A-BAD3-A6C4-E78A-56CA89258C13">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:36:52 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Shipped_data" id="4EDD58A2-142E-124C-FC65-56DFD714728B">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:36:52 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Received_data" id="E944F74F-E625-F7AF-53C0-B3C36AFFB96B">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:36:52 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cus_id" id="0A0609FF-FC5F-4B07-EB3E-C400B47056DC">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:44:07 UTC</createdTime>
+<generatorID>C1FA0F4B-D38D-9781-ACD8-BF9EBCB296CB</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<referedAttribute>5B8CA5C4-7929-15C6-AAF4-6022FC519FE0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9016EE8D-C047-B0C5-F687-DE9DEC0C361F" name="orders PK">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:44:07 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0A0609FF-FC5F-4B07-EB3E-C400B47056DC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

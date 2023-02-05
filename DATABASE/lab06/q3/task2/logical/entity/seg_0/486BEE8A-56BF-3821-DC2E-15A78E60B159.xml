@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="486BEE8A-56BF-3821-DC2E-15A78E60B159" name="Employees">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:30:53 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="emp_id" id="D10E40EA-2302-1CB4-2F53-67697F190585">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:31:57 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="f_name" id="C131E96C-AF0F-5AF5-D9A3-415A788FC8DD">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:33:18 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="l_name" id="3DEF2CDE-EFC3-1D3C-6CF7-ED8050D70EF5">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:33:37 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="address" id="C0881D40-8E3E-4B38-BCD5-D413A994EC5F">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:34:01 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AA97E84D-24B2-5092-1974-311B0FB7ECE8" name="Employees PK">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:33:12 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D10E40EA-2302-1CB4-2F53-67697F190585</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="651410FE-0780-049D-1949-260DEFFCE7DC" name="Employees" seqName="seg_0"/>
+   <object objectType="Table" objectID="4739708A-6DC3-46A6-3068-B8CB2229DFF9" name="customers" seqName="seg_0"/>
+   <object objectType="Table" objectID="A24A7107-F664-CABA-F916-9696E0117ACA" name="orders" seqName="seg_0"/>
+   <object objectType="Table" objectID="59D24367-0C40-688C-3AC2-8DC409D10724" name="produccts" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="EE66C8D2-F817-72F5-D431-51F01020C8C6" name="customers_Employees_FK" seqName="seg_0" containerID="4739708A-6DC3-46A6-3068-B8CB2229DFF9" refContainerID="651410FE-0780-049D-1949-260DEFFCE7DC"/>
+   <object objectType="FKIndexAssociation" objectID="C493EAE8-6E28-D952-140F-437EFE70B31D" name="orders_customers_FK" seqName="seg_0" containerID="A24A7107-F664-CABA-F916-9696E0117ACA" refContainerID="4739708A-6DC3-46A6-3068-B8CB2229DFF9"/>
+   <object objectType="FKIndexAssociation" objectID="4E4B9D20-A15A-B565-6EA3-2D11367CAB98" name="produccts_Employees_FK" seqName="seg_0" containerID="59D24367-0C40-688C-3AC2-8DC409D10724" refContainerID="651410FE-0780-049D-1949-260DEFFCE7DC"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

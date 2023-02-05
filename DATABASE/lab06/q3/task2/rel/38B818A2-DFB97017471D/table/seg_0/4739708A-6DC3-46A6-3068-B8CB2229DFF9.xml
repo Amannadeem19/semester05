@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4739708A-6DC3-46A6-3068-B8CB2229DFF9" name="customers">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>7A8ED39F-FBB8-BFCF-D282-7AF7698E34BB</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cus_id" id="26AA52D6-F135-5101-6484-90D46A1F5DB7">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>5B8CA5C4-7929-15C6-AAF4-6022FC519FE0</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="80C97CA5-B56C-7BA5-86CF-8C520869734D">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>A815E695-5092-E930-2DBD-D4096BC40FD7</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pro_name" id="21CD2746-3864-B2AE-3235-A1A1CA58A3D2">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>0344C225-8945-745B-C77C-B322D5511013</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Quantity" id="4906B69F-81FB-FF78-A962-D2AFE7D7EF6C">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>40B5E8FF-716E-86CC-6761-129726D7C898</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="E0BEAF4F-2FF9-FDCF-3332-A246FB73AD19">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>B99457C4-D2FA-08A5-524C-EB97F280D64C</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Employees_emp_id" id="F83D2118-4779-6555-CD5C-F40BFCD30692">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>1FDE7CC1-724F-EB41-80F6-050D243F4A39</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE66C8D2-F817-72F5-D431-51F01020C8C6" referredColumn="11C01251-26EF-3284-C967-BF7007B0E5B2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="13889531-9F29-39A3-E54C-E9F5F6732A48" name="customers_PK">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>1CD0FD6B-C828-B58C-C34C-9E88B5B3772E</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26AA52D6-F135-5101-6484-90D46A1F5DB7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DAF44F24-B06A-CE7D-A3C3-B1E25BC13D32" name="customers_Employees_FK">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>DC08F4D6-49C8-F8FB-56E8-28522A020511</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F83D2118-4779-6555-CD5C-F40BFCD30692"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

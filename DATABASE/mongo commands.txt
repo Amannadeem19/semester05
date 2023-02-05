@@ -1,0 +1,46 @@
+creating user--
+
+db.createUser({
+	user:"aman",
+	pwd:"1234"
+
+});
+
+db.createCollection('customers');
+
+show collections;
+
+db.customers.insert({first_name:"aman nadeem", age: "20"});
+
+same as select db.customers.find();--show the result
+
+add multirows
+
+db.customers.insert([{first_name: "ali", age: "30"},{first_name: "khan sahab", age: "30", gender:"male"}]);
+
+
+db.customers.update({first_name:"ali"}, {first_name:"khan", gender:"male"});
+
+db.customers.update({first_name:"khan"}, {$set: {gender:"male"}});
+
+db.customers.update({first_name:"khan"}, {$inc: {age:5}});
+
+inorder to remove the column
+
+db.customers.update({first_name:"khan"}, {$unset: {age:1}});
+
+unmatchtable row created 
+
+db.customers.update({first_name:"khan"}, {$inc: {age:5}}, {upsert:true});
+
+rename column name:
+
+db.customers.update({first_name:"khan"}, {$inc: {age:5}, {@rename:{"first_name" : "name"} }});
+
+remove
+
+db.customers.remove({first_name : "khan"}, {justOne: true});
+
+db.customers.find({$or : [{first_name: "ali"}, {first_name:"khan"}]});
+
+b.customers.find({age: {$gt:40}});

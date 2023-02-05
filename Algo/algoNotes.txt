@@ -1,0 +1,165 @@
+algorithm vs prograamer
+
+algorithm
+
+1. Done at design level
+2. Should know and done by domain knowledge
+3. Any language
+4.independent to hardware and OS
+5. analyze
+progam:
+
+1. Done at implementation level
+2. Done by programmer
+3. Programming language
+4. dependent to hardware and os
+5. Testing 
+
+Priori Analysis
+is done on algorithms 
+2. language and hardware independent
+3. time and space batata ha
+
+
+posteriori Testing 
+1. Program
+2. language and hardware dependent 
+3. hom much memory is consuming and watch time
+
+characteristics of algorithms :
+1. input --- 0 or more
+2. output function gives something --- atleast one output
+3. Definiteness ---  every statement should have clear statement
+4. finiteness -- should be stop, not working infinite like sql server is never stops working 
+5. effectiveness --  should do something effective , unnecessary things should be neglected eg:
+you make cakes but not added  in a menu.
+
+
+how to write an algorithm?
+
+algorithm swap(a,b)
+
+begin
+	
+	temp := a;
+	a := b;
+	b := temp;
+
+end
+
+HOW TO ANALYZE AN ALOGORITHM ?
+
+
+1. TIME  MEANS FASTER
+2. SPACE MEANS how much memory he takes in processing the particular algo
+3. NETWORK MEANS how much data is transfered and at what speed
+4. power means how much power it is using
+5. CPU REGSITERS usage
+
+
+algorithm swap(a,b)
+
+begin
+	time complexity					space complexity
+					
+		
+	temp := a; ---- 1 unit				a ---- 1 space
+	a := b; ---- 1 unit				b ---- 1 space
+	b := temp; ----- 1  unit			c ---- 1 space
+							s(n) = 3
+							O(1)
+
+end
+
+note : each statement takes one unit of time.
+
+here,
+ total time function f(n) =  3 ----------- O(1)
+
+
+frequency count method : used when we want to analyze the statement which is executed many time
+
+sum (A, n)
+
+{
+
+	s = 0;--------- 1
+	for(i = 0;---------1 i < n;----------n+1 i++ ------------------ 1) ---- overall this loop takes n+1
+	{
+		s += A[i]; -------------------- n
+	}
+	
+return s; ------------ 1
+}
+
+time complexity: 
+
+f(n)  = 2n + 3;
+O(n)
+space complexity:
+
+A = n
+i = 1
+n--- 1
+s---1
+s(n) = n + 3
+O(n)
+
+nested loop 
+
+sum (A, B, n){
+
+for(i = 0; ---------1 i < n; ----------- n+1 i++-----------1) ------------n+1
+{
+for (j = 0; j < n; j ++) n x (n+1)
+{
+one more statement // n x n	
+}
+
+}
+
+}
+f(n) = 2n^2 + 2n +1
+O(n) = n^2
+
+space complexity:
+A ---------------- n^2
+
+B----------------- n ^ 2
+C----------------- n ^ 2
+i----------------- 1
+j --------------- 1
+n ---------- 1
+s(n) = 3n^2 + 3
+O(n) =  n^2
+
+
+More on Time complexity.
+
+for(i = 0 i < n;  i++)
+{
+	sum; 
+	O(n)
+}
+
+for(i = 0 i < n;  i+=20)
+{
+	sum; 
+	f(n) = n/20;
+	O(n)
+}
+this means we dont care how much the loop is incrementing 
+
+for(i = 0; i < n; i++)
+{
+	for(j = 0; j < i; j++)
+	{
+		statement;
+	}
+}
+
+
+
+
+
+

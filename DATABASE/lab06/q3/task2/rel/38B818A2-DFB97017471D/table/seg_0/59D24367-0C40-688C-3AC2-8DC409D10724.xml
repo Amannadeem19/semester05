@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="59D24367-0C40-688C-3AC2-8DC409D10724" name="produccts">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>02B82F33-8B7F-859D-F9CA-5A5003461679</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="name" id="F1D95510-0021-6317-A7F2-A35720595016">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>62113B8C-E52F-93B0-88F3-A293E6162F70</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="A423BFBC-3299-195B-0697-EAF53346CF72">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>E865A344-773E-1E60-6A33-1EE43533E573</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,10000,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stock" id="F63289DE-063E-5B3B-D7C9-1E8C8DB31D83">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>C4E287A8-2AD8-1D11-18E8-0E94292E157E</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="product_id" id="B27EFD64-D4F5-ABFE-9F2C-793679571A20">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>A82736F8-775B-99F0-E369-F5B1A6EEF0C4</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Employees_emp_id" id="6C1BFB93-8F14-47ED-342C-E9C962634381">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>5788D00E-D5BD-38F0-B979-776BDE1FD9FA</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E4B9D20-A15A-B565-6EA3-2D11367CAB98" referredColumn="11C01251-26EF-3284-C967-BF7007B0E5B2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="888E000E-3422-EAD5-0C12-A245AC0BCD22" name="produccts_PK">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>D8328F17-060C-F4C4-42C2-3082345C536D</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B27EFD64-D4F5-ABFE-9F2C-793679571A20"/>
+<colUsage columnID="6C1BFB93-8F14-47ED-342C-E9C962634381"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A23F87DD-583F-C692-80CC-A0952EEF0857" name="produccts_Employees_FK">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>564B794B-D41D-BA04-9CED-098061DB5C13</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6C1BFB93-8F14-47ED-342C-E9C962634381"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

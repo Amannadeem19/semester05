@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="02B82F33-8B7F-859D-F9CA-5A5003461679" name="produccts">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:31:28 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="name" id="62113B8C-E52F-93B0-88F3-A293E6162F70">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:38:41 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="price" id="E865A344-773E-1E60-6A33-1EE43533E573">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:38:41 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,10000,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="stock" id="C4E287A8-2AD8-1D11-18E8-0E94292E157E">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:38:41 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="product_id" id="A82736F8-775B-99F0-E369-F5B1A6EEF0C4">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:38:42 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="emp_id" id="5788D00E-D5BD-38F0-B979-776BDE1FD9FA">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:43:35 UTC</createdTime>
+<generatorID>564B794B-D41D-BA04-9CED-098061DB5C13</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<referedAttribute>D10E40EA-2302-1CB4-2F53-67697F190585</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D8328F17-060C-F4C4-42C2-3082345C536D" name="produccts PK">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:39:13 UTC</createdTime>
+<ownerDesignName>1068</ownerDesignName>
+<engineerTo>
+<item key="38B818A2-AE18-ACB0-D267-DFB97017471D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A82736F8-775B-99F0-E369-F5B1A6EEF0C4</attributeRef>
+<attributeRef>5788D00E-D5BD-38F0-B979-776BDE1FD9FA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

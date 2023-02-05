@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="486BEE8A-56BF-3821-DC2E-15A78E60B159" name="Employees" seqName="seg_0"/>
+   <object objectType="Entity" objectID="7A8ED39F-FBB8-BFCF-D282-7AF7698E34BB" name="customers" seqName="seg_0"/>
+   <object objectType="Entity" objectID="949EDCE0-36F2-C112-697E-F2784AEB11D5" name="orders" seqName="seg_0"/>
+   <object objectType="Entity" objectID="02B82F33-8B7F-859D-F9CA-5A5003461679" name="produccts" seqName="seg_0"/>
+   <object objectType="Relation" objectID="DC08F4D6-49C8-F8FB-56E8-28522A020511" name="Employees_to_customer" seqName="seg_0"/>
+   <object objectType="Relation" objectID="C1FA0F4B-D38D-9781-ACD8-BF9EBCB296CB" name="customer_to_order" seqName="seg_0"/>
+   <object objectType="Relation" objectID="564B794B-D41D-BA04-9CED-098061DB5C13" name="employees_to_product" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

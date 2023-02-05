@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A24A7107-F664-CABA-F916-9696E0117ACA" name="orders">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>949EDCE0-36F2-C112-697E-F2784AEB11D5</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="order_name" id="032CA4A1-3E70-8320-99CD-B5D5F89F89B1">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>B1FF6FC0-FB03-F7E2-32B2-1D067F30B15A</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Quantity" id="7813973D-E522-527D-08D4-0C7761639FDD">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>40F80B1A-BAD3-A6C4-E78A-56CA89258C13</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Shipped_data" id="679A6266-DBB2-E85D-C780-25E66E9CE968">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>4EDD58A2-142E-124C-FC65-56DFD714728B</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Received_data" id="8544A98F-6572-231C-C84C-25154522A141">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>E944F74F-E625-F7AF-53C0-B3C36AFFB96B</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="customers_cus_id" id="9A5D4C01-E057-0481-2CDF-EA021F3FFD2C">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>0A0609FF-FC5F-4B07-EB3E-C400B47056DC</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C493EAE8-6E28-D952-140F-437EFE70B31D" referredColumn="26AA52D6-F135-5101-6484-90D46A1F5DB7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BB800FEF-2A0F-7FA9-030C-5CBFC4C649DF" name="orders_PK">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>9016EE8D-C047-B0C5-F687-DE9DEC0C361F</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9A5D4C01-E057-0481-2CDF-EA021F3FFD2C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="70BD13C8-4E4D-5CED-1AF7-CD922209B66D" name="orders_customers_FK">
+<createdBy>Abubaker</createdBy>
+<createdTime>2022-10-12 17:50:55 UTC</createdTime>
+<generatorID>C1FA0F4B-D38D-9781-ACD8-BF9EBCB296CB</generatorID>
+<ownerDesignName>1068</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9A5D4C01-E057-0481-2CDF-EA021F3FFD2C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,250 @@
+domain: define name of data, datatype and formats
+eg: telephone_number it the telephone_number of the company 
+string type format 123-2121-321
+
+
+A relation schema2 R, denoted by R(A1, A2, … , An), is made up of a relation name
+R and a list of attributes, A1, A2, … , An. Each attribute Ai is the name of a role
+played by some domain D in the relation schema R. D is called the domain of Ai
+and is denoted by dom(Ai). A relation schema is used to describe a relation; R is
+called the name of this relation. The degree (or arity) of a relation is the number of
+attributes n of its relation schema
+eg:
+
+A relation of degree seven, which stores information about university students,
+would contain seven attributes describing each student as follows:
+STUDENT(Name, Ssn, Home_phone, Address, Office_phone, Age, Gpa)
+
+
+A relation (or relation state)
+4 r of the relation schema R(A1, A2, … , An), also denoted
+by r(R), is a set of n-tuples r = {t1, t2, … , tm}. Each n-tuple t is an ordered list of n
+values t =<v1, v2, … , vn>, where each value vi
+, 1 ≤ i ≤ n, is an element of dom (Ai
+) or is
+a special NULL value. (NULL values are discussed further below and in Section 5.1.2.)
+The ith value in tuple t, which corresponds to the attribute Ai
+, is referred to as t[Ai
+] or
+t.Ai
+ (or t[i] if we use the positional notation). The terms relation intension for the
+schema R and relation extension for a relation state r(R) are also commonly used.
+
+It is possible for several attributes to have the same domain. The attribute names indicate different roles, or interpretations, for the domain. For example, in the STUDENT
+relation, the same domain USA_phone_numbers plays the role of Home_phone, referring
+to the home phone of a student, and the role of Office_phone, referring to the office
+phone of the student. A third possible attribute (not shown) with the same domain
+could be Mobile_phone.
+
+characteristic of relation:
+1.ordering of tuples.
+2. ordering of tuples attributes.
+
+3.According to this definition of tuple as a mapping, a tuple can be considered as a
+set of (<attribute>, <value>) pairs, where each pair gives the value of the mapping
+from an attribute Ai to a value vi from dom(Ai). The ordering of attributes is not
+important, because the attribute name appears with its value. By this definition, the 
+two tuples shown in Figure 5.3 are identical. This makes sense at an abstract level,
+since there really is no reason to prefer having one attribute value appear before
+another in a tuple. When the attribute name and value are included together in a
+tuple, it is known as self-describing data, because the description of each value
+(attribute name) is included in the tuple.
+
+Relational Model Notation
+A relation schema R of degree n is denoted by R(A1, A2, … , An).
+■ The uppercase letters Q, R, S denote relation names.
+■ The lowercase letters q, r, s denote relation states.
+■ The letters t, u, v denote tuples.
+■ An attribute A can be qualified with the relation name R to which it belongs
+by using the dot notation R.A—for example, STUDENT.Name or
+STUDENT.Age. This is because the same name may be used for two attributes in different relations. However, all attribute names in a particular
+relation must be distinct.
+
+
+■ An n-tuple t in a relation r(R) is denoted by t = <v1, v2, … , vn>, where vi is
+the value corresponding to attribute Ai. The following notation refers to
+component values of tuples:
+ Both t[Ai] and t.Ai (and sometimes t[i]) refer to the value vi in t for attribute Ai.
+ Both t[Au, Aw, … , Az] and t.(Au, Aw, … , Az), where Au, Aw, … , Az is a list
+of attributes from R, refer to the subtuple of values <vu, vw, … , vz> from t
+corresponding to the attributes specified in the list.
+
+As an example, consider the tuple t = <’Barbara Benson’, ‘533-69-1238’,
+‘(817)839-8461’, ‘7384 Fontana Lane’, NULL, 19, 3.25> from the STUDENT relation in Figure 5.1; we have t[Name] = <‘Barbara Benson’>, and t[Ssn, Gpa, Age] = <‘533-69-1238’,
+3.25, 19>.
+
+types of constraints:
+
+inherent model-based constraints / implicit constraints:
+
+constraints that are inherent in the data model
+
+schema based or explicit constraints:
+constraints athat can not be directly specified but specify by using ddl
+data definition language.
+
+application based / semantic constraints / business rules:
+onstraints athat can not be directly specified in the schema but should be implement for the application point of view.
+includes: domain constraints, key constraints, constraint on NULLS, entity integrity constraint, and referential integrity constraint.
+
+KEY CONSTRAINTS:
+super key of R:
+set of attributes super key OF R with the condition:
+1.no two tuple will have the same SK
+2.this condition must hold in any valid state r(R).
+
+key of R:
+a minimal super key
+a key is a super key but not viceversaa
+
+
+In general, a relation schema may have more than one key. In this case, each of the
+keys is called a candidate key. For example, the CAR relation in Figure 5.4 has two
+candidate keys: License_number and Engine_serial_number. It is common to designate
+one of the candidate keys as the primary key of the relation. This is the candidate
+key whose values are used to identify tuples in the relation. We use the convention
+that the attributes that form the primary key of a relation schema are underlined, as
+shown in Figure 5.4. Notice that when a relation schema has several candidate keys,
+the choice of one to become the primary key is somewhat arbitrary; however, it is
+usually better to choose a primary key with a single attribute or a small number
+of attributes. The other candidate keys are designated as unique keys and are
+not underlined.
+
+Relational Databases:
+A relational database schema S is a set of relation schemas S = {R1, R2, … , Rm} and
+a set of integrity constraints IC.A relational database state10 DB of S is a set of
+relation states DB = {r1, r2, … , rm} such that each ri is a state of Ri and such that the
+ri relation states satisfy the integrity constraints specified in IC.
+eg: COMPANY = {EMPLOYEE, DEPARTMENT,
+DEPT_LOCATIONS, PROJECT, WORKS_ON, DEPENDENT};
+A database state that does not obey all the integrity constraints is called a not valid state
+and a state that obeys all IC is called valid state.
+
+ENTITY INTEGRITY CONSTRAINT:
+The entity integrity constraint states that no primary key value can be NULL. This is
+because the primary key value is used to identify individual tuples in a relation. Having NULL values for the primary key implies that we cannot identify some tuples. For
+example, if two or more tuples had NULL for their primary keys, we may not be able
+to distinguish them if we try to reference them from other relations.
+
+REFERENTIAL INTEGRITY CONSTRAINT:
+
+The referential integrity constraint is specified between two relations and is used to
+maintain the consistency among tuples in the two relations. Informally, the referential integrity constraint states that a tuple in one relation that refers to another relation must refer to an existing tuple in that relation. For example, in Figure 5.6, the
+attribute Dno of EMPLOYEE gives the department number for which each employee
+works; hence, its value in every EMPLOYEE tuple must match the Dnumber value of
+some tuple in the DEPARTMENT relation.
+
+To define referential integrity more formally, first we define the concept of a foreign
+key. The conditions for a foreign key, given below, specify a referential integrity
+constraint between the two relation schemas R1 and R2. A set of attributes FK in
+relation schema R1 is a foreign key of R1 that references relation R2 if it satisfies the
+following rules:
+
+ 1. The attributes in FK have the same domain(s) as the primary key attributes
+PK of R2; the attributes FK are said to reference or refer to the relation R2.
+ 
+2. A value of FK in a tuple t1 of the current state r1(R1) either occurs as a value
+of PK for some tuple t2 in the current state r2(R2) or is NULL. In the former
+case, we have t1[FK] = t2[PK], and we say that the tuple t1 references or
+refers to the tuple t2.
+
+In this definition, R1 is called the referencing relation and R2 is the referenced
+relation. If these two conditions hold, a referential integrity constraint from R1 to
+R2 is said to hold. In a database of many relations, there are usually many referential
+integrity constraints.
+
+Notice that a foreign key can refer to its own relation. For example, the attribute
+Super_ssn in EMPLOYEE refers to the supervisor of an employee; this is another
+employee, represented by a tuple in the EMPLOYEE relation. Hence, Super_ssn is a
+foreign key that references the EMPLOYEE relation itself. In Figure 5.6 the tuple for
+employee ‘John Smith’ references the tuple for employee ‘Franklin Wong,’ indicating that ‘Franklin Wong’ is the supervisor of ‘John Smith
+
+Insert Operation:
+The Insert operation provides a list of attribute values for a new tuple t that is to be
+inserted into a relation R. Insert can violate any of the four types of constraints. 
+eg:
+
+■ Operation:
+Insert <‘Cecilia’, ‘F’, ‘Kolonsky’, NULL, ‘1960-04-05’, ‘6357 Windy Lane, Katy,
+TX’, F, 28000, NULL, 4> into EMPLOYEE.
+Result: This insertion violates the entity integrity constraint (NULL for the
+primary key Ssn), so it is rejected.
+■ Operation:
+Insert <‘Alicia’, ‘J’, ‘Zelaya’, ‘999887777’, ‘1960-04-05’, ‘6357 Windy Lane, Katy,
+TX’, F, 28000, ‘987654321’, 4> into EMPLOYEE.
+Result: This insertion violates the key constraint because another tuple with
+the same Ssn value already exists in the EMPLOYEE relation, and so it is
+rejected.
+■ Operation:
+Insert <‘Cecilia’, ‘F’, ‘Kolonsky’, ‘677678989’, ‘1960-04-05’, ‘6357 Windswept,
+Katy, TX’, F, 28000, ‘987654321’, 7> into EMPLOYEE.
+Result: This insertion violates the referential integrity constraint specified on
+Dno in EMPLOYEE because no corresponding referenced tuple exists in
+DEPARTMENT with Dnumber = 7.
+Operation:
+Insert <‘Cecilia’, ‘F’, ‘Kolonsky’, ‘677678989’, ‘1960-04-05’, ‘6357 Windy Lane,
+Katy, TX’, F, 28000, NULL, 4> into EMPLOYEE.
+Result: This insertion satisfies all constraints, so it is acceptable.
+If an insertion violates one or more constraints, the default option is to reject the
+insertion.
+
+The Delete operation can violate only referential integrity. This occurs if the tuple
+being deleted is referenced by foreign keys from other tuples in the database. To
+specify deletion, a condition on the attributes of the relation selects the tuple (or
+tuples) to be deleted. Here are some examples.
+■ Operation:
+Delete the WORKS_ON tuple with Essn = ‘999887777’ and Pno = 10.
+Result: This deletion is acceptable and deletes exactly one tuple.
+■ Operation:
+Delete the EMPLOYEE tuple with Ssn = ‘999887777’.
+Result: This deletion is not acceptable, because there are tuples in
+WORKS_ON that refer to this tuple. Hence, if the tuple in EMPLOYEE is
+deleted, referential integrity violations will result.
+■ Operation:
+Delete the EMPLOYEE tuple with Ssn = ‘333445555’.
+Result: This deletion will result in even worse referential integrity violations,
+because the tuple involved is referenced by tuples from the EMPLOYEE,
+DEPARTMENT, WORKS_ON, and DEPENDENT relations.
+Several options are available if a deletion operation causes a violation. The first
+option, called restrict, is to reject the deletion. The second option, called cascade, is
+to attempt to cascade (or propagate) the deletion by deleting tuples that reference the
+tuple that is being deleted. For example, in operation 2, the DBMS could automatically delete the offending tuples from WORKS_ON with Essn = ‘999887777’. A
+third option, called set null or set default, is to modify the referencing attribute
+values that cause the violation; each such value is either set to NULL or changed to
+reference another default valid tuple. Notice that if a referencing attribute that
+causes a violation is part of the primary key, it cannot be set to NULL; otherwise, it
+would violate entity integrity.
+
+Update Operation:
+The Update (or Modify) operation is used to change the values of one or more
+attributes in a tuple (or tuples) of some relation R. It is necessary to specify a condition on the attributes of the relation to select the tuple (or tuples) to be modified.
+Here are some examples.
+■ Operation:
+Update the salary of the EMPLOYEE tuple with Ssn = ‘999887777’ to 28000.
+Result: Acceptable.
+■ Operation:
+Update the Dno of the EMPLOYEE tuple with Ssn = ‘999887777’ to 1.
+Result: Acceptable.
+■ Operation:
+Update the Dno of the EMPLOYEE tuple with Ssn = ‘999887777’ to 7.
+Result: Unacceptable, because it violates referential integrity.
+■ Operation:
+Update the Ssn of the EMPLOYEE tuple with Ssn = ‘999887777’ to ‘987654321’.
+Result: Unacceptable, because it violates primary key constraint by repeating
+a value that already exists as a primary key in another tuple; it violates referential integrity constraints because there are other relations that refer to the
+existing value of Ssn.
+Updating an attribute that is neither part of a primary key nor part of a foreign key
+usually causes no problems; the DBMS need only check to confirm that the new
+value is of the correct data type and domain. Modifying a primary key value is similar to deleting one tuple and inserting another in its place because we use the primary key to identify tuples. Hence, the issues discussed earlier in both Sections 5.3.1
+(Insert) and 5.3.2 (Delete) come into play. If a foreign key attribute is modified.
+
+
+
+Transaction operation:
+is an executing program that includes some database operations such as reading from the database , insertion , deletion and updation operattion is applied.
+At the end of transaction, the database must be in consistent and valid state.
+A single transaction may involve number of retrival operations and number of updation operation.
+
+
+
+
